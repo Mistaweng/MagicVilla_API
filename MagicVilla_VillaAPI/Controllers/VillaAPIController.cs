@@ -19,11 +19,18 @@ namespace MagicVilla_VillaAPI.Controllers
             _logger = logger;
         } */
 
-        private readonly ILogging _logger;
+
+
+        /* private readonly ILogging _logger;
 
         public VillaAPIController(ILogging logger)
         {
             _logger = logger;
+        } */
+
+        public VillaAPIController()
+        {
+            
         }
 
         //Get endpoint
@@ -31,7 +38,7 @@ namespace MagicVilla_VillaAPI.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public ActionResult<IEnumerable<VillaDTO>> GetVillas()
         {
-            _logger.Log("Getting all villas", "");
+            //_logger.Log("Getting all villas", "");
             return Ok(VillaStore.villalist);
         }
 
@@ -49,7 +56,7 @@ namespace MagicVilla_VillaAPI.Controllers
             //Add validation
             if (id == 0)
             {
-                _logger.Log("Get Villa Error with Id" + id, "error");
+               // _logger.Log("Get Villa Error with Id" + id, "error");
                 return BadRequest();
 
             }
