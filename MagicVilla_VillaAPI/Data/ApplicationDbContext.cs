@@ -27,6 +27,7 @@ namespace MagicVilla_VillaAPI.Data
                     Rate = 200,
                     Sqft = 500,
                     Amenity = ""
+
                 });
         }
     }
